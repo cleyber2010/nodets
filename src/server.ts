@@ -15,7 +15,7 @@ app.engine("mustache", mustache());
 
 app.use(router);
 app.use((req, res) => {
-    res.send("Página não encontrada");
+    res.render("pages/404");
 });
 
 app.listen(process.env.PORT);

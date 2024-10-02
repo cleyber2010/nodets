@@ -1,6 +1,9 @@
 {{>includes/header}}
+
+{{#banner}}
 <section class="banner" style="background-image: url('images/{{ banner.image }}')">{{ banner.title }}</section>
 <h2>{{ banner.title }} disponíveis para adoção</h2>
+{{/banner}}
 
 <div class="container list">
     {{#list}}
@@ -12,4 +15,10 @@
         </div>
     {{/list}}
 </div>
+
+{{^list}}
+    <div class="container no-list">
+        <h2>Sua busca não retornou resultados.</h2>
+    </div>
+{{/list}}
 {{>includes/footer}}
