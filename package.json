@@ -4,6 +4,8 @@
   "description": "Projeto MVC com Node Js",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/server.js",
+    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon -e ts,json,mustache src/server.ts"
   },
@@ -19,6 +21,7 @@
     "@types/express": "^5.0.0",
     "@types/mustache-express": "^1.2.5",
     "@types/node": "^22.7.4",
+    "copyfiles": "^2.4.1",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
